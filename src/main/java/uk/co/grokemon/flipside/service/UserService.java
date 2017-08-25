@@ -5,6 +5,8 @@ import uk.co.grokemon.flipside.domain.User;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -17,5 +19,14 @@ public class UserService {
 
     public List<User> getUserList() {
         return userList;
+    }
+
+    public User getUserById(int id) throws UserNotFoundException {
+        try {
+            return userList.stream().filter(user -> user.getId() == id).findFirst().get();
+        }
+        catch (NoSuchElementException ex) {
+            throw new UserNotFoundException();
+        }
     }
 }
