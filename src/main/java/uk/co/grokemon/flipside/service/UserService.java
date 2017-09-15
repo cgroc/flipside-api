@@ -6,7 +6,6 @@ import uk.co.grokemon.flipside.domain.User;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @Service
 public class UserService {

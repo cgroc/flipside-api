@@ -13,7 +13,6 @@ import uk.co.grokemon.flipside.service.UserService;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 public class UserController {
